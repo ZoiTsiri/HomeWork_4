@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="askUser()">Are you married?</button>
+    <p id="text"></p>
+
+
+    <script>
+        function askUser() {
+            const married = confirm("Are you married?");
+            const numberOfChildren = prompt("How many children do you have?");
+            let childrenCategory;
+            switch (numberOfChildren) {
+                case "0":
+                childrenCategory = "xωρίς παιδιά"
+                break;
+                case "1":
+                childrenCategory = "με ένα παιδί"
+                break;
+                case "2":
+                childrenCategory = "με δύο παιδιά"
+                break;
+                case "3":
+                childrenCategory = "τρίτεκνος"
+                break;
+                case "4+":
+                childrenCategory = "πολύτεκνος"
+                break;
+            }
+            if(married) {
+                document.getElementById("text").innerHTML = "Παντρεμένος " +  childrenCategory;
+            } else {
+                document.getElementById("text").innerHTML = "Ανύπαντρος " +  childrenCategory;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
