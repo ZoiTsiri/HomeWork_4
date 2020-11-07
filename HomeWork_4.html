@@ -14,6 +14,7 @@
 
 
     <script>
+        "use strict";
         function askUser() {
             const married = confirm("Are you married?");
             const numberOfChildren = prompt("How many children do you have?");
@@ -34,6 +35,8 @@
                 case "4+":
                 childrenCategory = "πολύτεκνος"
                 break;
+                default:
+                childrenCategory = "μη ανθρωπος "
             }
             if(married) {
                 document.getElementById("text").innerHTML = "Παντρεμένος " +  childrenCategory;
