@@ -15,34 +15,32 @@
 
     <script>
         "use strict";
+
         function askUser() {
             const married = confirm("Are you married?");
             const numberOfChildren = prompt("How many children do you have?");
             let childrenCategory;
             switch (numberOfChildren) {
                 case "0":
-                childrenCategory = "xωρίς παιδιά"
-                break;
+                    childrenCategory = "xωρίς παιδιά"
+                    break;
                 case "1":
-                childrenCategory = "με ένα παιδί"
-                break;
+                    childrenCategory = "με ένα παιδί"
+                    break;
                 case "2":
-                childrenCategory = "με δύο παιδιά"
-                break;
+                    childrenCategory = "με δύο παιδιά"
+                    break;
                 case "3":
-                childrenCategory = "τρίτεκνος"
-                break;
+                    childrenCategory = "τρίτεκνος"
+                    break;
                 case "4+":
-                childrenCategory = "πολύτεκνος"
-                break;
+                    childrenCategory = "πολύτεκνος"
+                    break;
                 default:
-                childrenCategory = "μη ανθρωπος"
+                    childrenCategory = "μη ανθρωπος"
             }
-            if(married) {
-                document.getElementById("text").innerHTML = "Παντρεμένος " +  childrenCategory;
-            } else {
-                document.getElementById("text").innerHTML = "Ανύπαντρος " +  childrenCategory;
-            }
+            document.getElementById("text").innerHTML = (married ? "Παντρεμένος" : "Ανύπαντρος ") + " " +
+                childrenCategory;
         }
     </script>
 
